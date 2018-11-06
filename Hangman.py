@@ -20,19 +20,19 @@ def menuEn(wordlist):
     print("  |")
     print("  |")
     print("-----")
-    
+
     option = input("")
-    
+
     if option == "1": #enters the game
         print ("Entering the game...")
         maingameEn(wordlist)
-    
+
     elif option == "2": #enters language select menu
         languageselection()
-    
+
     elif option == "3": #exits the game
         print ("Exiting the game...")
-    
+
     else:
         print ("Invalid option")
         menuEn(wordlist)
@@ -57,19 +57,19 @@ def menuPt(wordlist):
     print("  |")
     print("  |")
     print("-----")
-    
+
     option = input("")
-    
+
     if option == "1":
         print ("A entrar no jogo...") #Enters the game
         maingamePt(wordlist)
-    
+
     elif option == "2": #opens language select menu
         languageselection()
-    
+
     elif option == "3": #Exits the game
         print ("A sair do jogo...")
-    
+
     else:
         print ("Opcao invalida")
         menuPt(wordlist)
@@ -97,9 +97,9 @@ def languageselection():
     print("-----")
 
     language = input("")
-    if language == "Pt" or language == "Portuguese":  #if portuguese is selected creates a list with words in portuguese from the file word_Pt.txt
+    if language == "Pt" or language == "pt" or language == "Portuguese" or language == "portuguese":  #if portuguese is selected creates a list with words in portuguese from the file word_Pt.txt
         print("Portuguese selected")
-        
+
         with open("words_Pt.txt","r") as f: #imports words from the file
             wordlist = []
             for line in f:
@@ -107,8 +107,8 @@ def languageselection():
                 wordlist.append((category, word))
             f.close
         menuPt(wordlist) #goes to the selected language menu
-    
-    elif language == "En" or language == "English":  #if english is selected creates a list with words in english from the file word_En.txt
+
+    elif language == "En" or language == "en" or language == "English" or language == "english":  #if english is selected creates a list with words in english from the file word_En.txt
         print("English selected")
 
         with open("words_En.txt","r") as f: #imports words from the file
@@ -118,7 +118,7 @@ def languageselection():
                 wordlist.append((category, word))
             f.close
         menuEn(wordlist) #goes to the selected language menu
-    
+
     else:
         print("Invalid language")
         languageselection()
@@ -127,7 +127,7 @@ def maingamePt(wordlist):
     try:
         wordnumber = random.randint(1,len(wordlist)-1) #chooses the word
         choosedpair = wordlist[wordnumber]
-        wordlist.remove(choosedpair)  #removes the choosed word from future games 
+        wordlist.remove(choosedpair)  #removes the choosed word from future games
         category = choosedpair[0]   #separates the word from the category
         word = choosedpair[1]
         letters = list(word)
@@ -139,8 +139,8 @@ def maingamePt(wordlist):
         won = False
         lost = False
         fails = 0
-        alphabet = ["A", "a", "B", "b", "C", "c", "d", "E", "e", "F", "f", "G", "g", "H", "h", "I", "i", "J", "j", "K", "k", "L", "l", "M", "m", "N", "n", "O", "o", "P", "p", "Q", "q", "R", "r", "S", "s", "T", "t", "U", "u", "V", "v", "W", "w", "X", "x", "Y", "y", "Z", "z"]
-        
+        alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+
         while won == False and lost == False: #loop will only run if the player havent lost/won yet
             if fails == 0: #interface if the player failed 0 times
                 print("Jogo da Forca")
@@ -161,7 +161,7 @@ def maingamePt(wordlist):
                 print("  |")
                 print("  |")
                 print("-----   ", "".join(lettersshow), " - ", category)
-                
+
             elif fails == 1: #interface if the player failed 1 time
                 print("Jogo da Forca")
                 print(" ________________________________ ")
@@ -181,7 +181,7 @@ def maingamePt(wordlist):
                 print("  |")
                 print("  |")
                 print("-----   ", "".join(lettersshow), " - ", category)
-                
+
             elif fails == 2: #interface if the player failed 2 times
                 print("Jogo da Forca")
                 print(" ________________________________ ")
@@ -201,7 +201,7 @@ def maingamePt(wordlist):
                 print("  |")
                 print("  |")
                 print("-----   ", "".join(lettersshow), " - ", category)
-                
+
             elif fails == 3: #interface if the player failed 3 times
                 print("Jogo da Forca")
                 print(" ________________________________ ")
@@ -221,7 +221,7 @@ def maingamePt(wordlist):
                 print("  |")
                 print("  |")
                 print("-----   ", "".join(lettersshow), " - ", category)
-                
+
             elif fails == 4: #interface if the player failed 4 times
                 print("Jogo da Forca")
                 print(" ________________________________ ")
@@ -241,7 +241,7 @@ def maingamePt(wordlist):
                 print("  |")
                 print("  |")
                 print("-----   ", "".join(lettersshow), " - ", category)
-                
+
             elif fails == 5: #interface if the player failed 5 times
                 print("Jogo da Forca")
                 print(" ________________________________ ")
@@ -261,16 +261,16 @@ def maingamePt(wordlist):
                 print("  |")
                 print("  |")
                 print("-----   ", "".join(lettersshow), " - ", category)
-                
+
             else: #will end the game if the player has more than 5 fails
                 lost = True
                 break
-                
+
             guess = input("")
-            
+
             if guess in guessed: #check if the player repeated some letter
                 print("You've already said that letter")
-                
+
             elif guess == "Give up" or guess == "give up": #gaves up
                 print("Jogo da Forca")
                 print(" ________________________________ ")
@@ -292,10 +292,16 @@ def maingamePt(wordlist):
                 print("-----   ", word, " - ", category)
                 input("")
                 menuEn(wordlist)
-                
-            elif len(guess) != 1 or guess not in alphabet: #if the caracter is not a letter is not valid
-                print("Invalid Guess")
-                
+
+            elif len(guess) != 1: #if is more than one caracter
+                print("Palpite invalido: Escreva apenas uma letra de cada vez")
+
+            elif guess in ALPHABET: #if player writes in upper case is not valid
+                print("Palpite invalido: Nao use maiusculas")
+
+            elif guess not in alphabet: #if it is not a letter is not valid
+                print("Caracter invalido")
+
             else:
                 guessed.append(guess) #will add the letter to the listof letters already guessed
                 if guess in letters: #if player guesses right will remove that word from the list of remaining letters and add it to the guessed letters
@@ -306,15 +312,15 @@ def maingamePt(wordlist):
                         del letters[guesslocation]
                         letters.insert(guesslocation," ")
                         rightguessed = rightguessed + 1
-                    
+
                     if rightguessed == len(word): #sees if player as already guessed all letters
                         won = True
-                    
+
                 else:
                     fails = fails + 1
                     if fails >= 6: #if player fail more than 5 times
                         lost = True
-            
+
         if won == True: #player wins
             print("Jogo da Forca")
             print(" ________________________________ ")
@@ -336,7 +342,7 @@ def maingamePt(wordlist):
             print("-----   ", word, " - ", category)
             input("")
             menuEn(wordlist)
-            
+
         elif lost == True: #player loses
             print("Jogo da Forca")
             print(" ________________________________ ")
@@ -358,7 +364,7 @@ def maingamePt(wordlist):
             print("-----   ", word, " - ", category)
             input("")
             menuEn(wordlist)
-            
+
     except ValueError: #Will execute if wordlist gets empty
         print("_________________Erro_________________ \n Já jogaste todas as palavras disponiveis \n Agora podes jogar noutro idioma (1) \n Ou podes adicionar mais palavras ao ficheiro \"words_Pt\" para adicionar palavras ao jogo")
         answer = input("")
@@ -369,7 +375,7 @@ def maingameEn(wordlist):
     try:
         wordnumber = random.randint(1,len(wordlist)-1) #chooses the word
         choosedpair = wordlist[wordnumber]
-        wordlist.remove(choosedpair)  #removes the choosed word from future games 
+        wordlist.remove(choosedpair)  #removes the choosed word from future games
         category = choosedpair[0]   #separates the word from the category
         word = choosedpair[1]
         letters = list(word)
@@ -381,8 +387,9 @@ def maingameEn(wordlist):
         won = False
         lost = False
         fails = 0
-        alphabet = ["A", "a", "B", "b", "C", "c", "d", "E", "e", "F", "f", "G", "g", "H", "h", "I", "i", "J", "j", "K", "k", "L", "l", "M", "m", "N", "n", "O", "o", "P", "p", "Q", "q", "R", "r", "S", "s", "T", "t", "U", "u", "V", "v", "W", "w", "X", "x", "Y", "y", "Z", "z"]
-        
+        alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+        ALPHABET = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+
         while won == False and lost == False: #loop will only run if the player havent lost/won yet
             if fails == 0: #interface if the player failed 0 times
                 print("The Hangman game")
@@ -403,7 +410,7 @@ def maingameEn(wordlist):
                 print("  |")
                 print("  |")
                 print("-----   ", "".join(lettersshow), " - ", category)
-                
+
             elif fails == 1: #interface if the player failed 1 time
                 print("The Hangman game")
                 print(" ________________________________ ")
@@ -423,7 +430,7 @@ def maingameEn(wordlist):
                 print("  |")
                 print("  |")
                 print("-----   ", "".join(lettersshow), " - ", category)
-                
+
             elif fails == 2: #interface if the player failed 2 times
                 print("The Hangman game")
                 print(" ________________________________ ")
@@ -443,7 +450,7 @@ def maingameEn(wordlist):
                 print("  |")
                 print("  |")
                 print("-----   ", "".join(lettersshow), " - ", category)
-                
+
             elif fails == 3: #interface if the player failed 3 times
                 print("The Hangman game")
                 print(" ________________________________ ")
@@ -463,7 +470,7 @@ def maingameEn(wordlist):
                 print("  |")
                 print("  |")
                 print("-----   ", "".join(lettersshow), " - ", category)
-                
+
             elif fails == 4: #interface if the player failed 4 times
                 print("The Hangman game")
                 print(" ________________________________ ")
@@ -483,7 +490,7 @@ def maingameEn(wordlist):
                 print("  |")
                 print("  |")
                 print("-----   ", "".join(lettersshow), " - ", category)
-                
+
             elif fails == 5: #interface if the player failed 5 times
                 print("The Hangman game")
                 print(" ________________________________ ")
@@ -503,16 +510,16 @@ def maingameEn(wordlist):
                 print("  |")
                 print("  |")
                 print("-----   ", "".join(lettersshow), " - ", category)
-                
+
             else: #will end the game if the player has more than 5 fails
                 lost = True
                 break
-                
+
             guess = input("")
-            
+
             if guess in guessed: #check if the player repeated some letter
                 print("You've already said that letter")
-                
+
             elif guess == "Give up" or guess == "give up": #gaves up
                 print("The Hangman game")
                 print(" ________________________________ ")
@@ -534,10 +541,16 @@ def maingameEn(wordlist):
                 print("-----   ", word, " - ", category)
                 input("")
                 menuEn(wordlist)
-                
-            elif len(guess) != 1 or guess not in alphabet: #if the caracter is not a letter is not valid
+
+            elif len(guess) != 1: #if is more than one caracter
+                print("Invalid Guess: Please write one letter at a time")
+
+            elif guess in ALPHABET: #if player writes in upper case is not valid
+                print("Invalid Guess: please use lowercase")
+
+            elif guess not in alphabet: #if it is not a letter is not valid
                 print("Invalid Guess")
-                
+
             else:
                 guessed.append(guess) #will add the letter to the listof letters already guessed
                 if guess in letters: #if player guesses right will remove that word from the list of remaining letters and add it to the guessed letters
@@ -548,15 +561,15 @@ def maingameEn(wordlist):
                         del letters[guesslocation]
                         letters.insert(guesslocation," ")
                         rightguessed = rightguessed + 1
-                    
+
                     if rightguessed == len(word): #sees if player as already guessed all letters
                         won = True
-                    
+
                 else:
                     fails = fails + 1
                     if fails >= 6: #if player fail more than 5 times
                         lost = True
-            
+
         if won == True: #player wins
             print("The Hangman game")
             print(" ________________________________ ")
@@ -579,7 +592,7 @@ def maingameEn(wordlist):
             input("")
             print(wordlist)
             menuEn(wordlist)
-            
+
         elif lost == True: #player loses
             print("The Hangman game")
             print(" ________________________________ ")
@@ -601,7 +614,7 @@ def maingameEn(wordlist):
             print("-----   ", word, " - ", category)
             input("")
             menuEn(wordlist)
-            
+
     except ValueError: #Will execute if wordlist gets empty
         print("_________________Error_________________ \n You played all the words available \n You can now play in another language (1) \n Or you can add more words to \"words_En\" to add more words to the game.")
         answer = input("")
