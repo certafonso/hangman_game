@@ -1,0 +1,122 @@
+brand apple
+
+brand google
+
+brand microsoft
+
+brand facebook
+
+brand amazon
+brand cocacola
+
+brand samsung
+
+brand disney
+
+brand toyota
+
+brand mcdonalds
+
+brand intel
+
+brand cisco
+
+brand ibm
+
+brand nike
+
+brand verizon
+
+brand bmw
+
+brand oracle
+
+brand marlboro
+
+brand honda
+
+brand walmart
+
+brand visa
+
+brand pepsi
+
+brand nescafe
+
+brand gillete
+
+brand starbucks
+
+brand gucci
+
+brand audi
+
+brand ikea
+
+brand ford
+
+brand zara
+
+brand siemens
+
+brand mastercard
+
+brand nestle
+
+brand netflix
+
+brand fox
+
+brand chevrolet
+
+brand pampers
+
+brand porsche
+
+brand cartier
+
+brand ebay
+
+brand sony
+
+brand colgate
+
+brand danone
+
+brand adidas
+
+brand lexus
+
+brand nissan
+
+brand rolex
+
+brand santander
+
+brand huawei
+
+brand adobe
+
+brand fedex
+
+brand heineken
+
+brand boeing
+
+brand chanel
+
+brand nivea
+
+brand volkswagen
+
+brand lego
+
+brand panasonic
+
+brand philips
+
+brand allianz
+
+brand paypal
+
+brand dell

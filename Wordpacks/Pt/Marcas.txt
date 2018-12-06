@@ -1,0 +1,122 @@
+marca apple
+
+marca google
+
+marca microsoft
+
+marca facebook
+
+marca amazon
+marca cocacola
+
+marca samsung
+
+marca disney
+
+marca toyota
+
+marca mcdonalds
+
+marca intel
+
+marca cisco
+
+marca ibm
+
+marca nike
+
+marca verizon
+
+marca bmw
+
+marca oracle
+
+marca marlboro
+
+marca honda
+
+marca walmart
+
+marca visa
+
+marca pepsi
+
+marca nescafe
+
+marca gillete
+
+marca starbucks
+
+marca gucci
+
+marca audi
+
+marca ikea
+
+marca ford
+
+marca zara
+
+marca siemens
+
+marca mastercard
+
+marca nestle
+
+marca netflix
+
+marca fox
+
+marca chevrolet
+
+marca pampers
+
+marca porsche
+
+marca cartier
+
+marca ebay
+
+marca sony
+
+marca colgate
+
+marca danone
+
+marca adidas
+
+marca lexus
+
+marca nissan
+
+marca rolex
+
+marca santander
+
+marca huawei
+
+marca adobe
+
+marca fedex
+
+marca heineken
+
+marca boeing
+
+marca chanel
+
+marca nivea
+
+marca volkswagen
+
+marca lego
+
+marca panasonic
+
+marca philips
+
+marca allianz
+
+marca paypal
+
+marca dell
